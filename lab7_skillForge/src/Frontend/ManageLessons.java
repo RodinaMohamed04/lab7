@@ -4,10 +4,6 @@
  */
 package Frontend;
 
-/**
- *
- * @author mo
- */
 public class ManageLessons extends javax.swing.JFrame {
 
     /**
@@ -27,10 +23,10 @@ public class ManageLessons extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        Add = new javax.swing.JButton();
+        Edit = new javax.swing.JButton();
+        Delete = new javax.swing.JButton();
+        Back = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -38,31 +34,31 @@ public class ManageLessons extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(153, 153, 255));
         jLabel1.setText("Manage Lessons");
 
-        jButton1.setText("Add lesson");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Add.setText("Add lesson");
+        Add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                AddActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Edit lesson");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Edit.setText("Edit lesson");
+        Edit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                EditActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Delete lesson");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        Delete.setText("Delete lesson");
+        Delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                DeleteActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Back");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        Back.setText("Back");
+        Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                BackActionPerformed(evt);
             }
         });
 
@@ -73,10 +69,10 @@ public class ManageLessons extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Back, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Edit, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Add, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(146, 146, 146)
@@ -89,45 +85,52 @@ public class ManageLessons extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(Add)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(Edit)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(Delete)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
+                .addComponent(Back)
                 .addContainerGap(68, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddActionPerformed
+        AddLessons add = new AddLessons();
+        add.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_AddActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void EditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditActionPerformed
+        EditLesson edit = new EditLesson();
+        edit.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_EditActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
+        DeleteLesson delete = new DeleteLesson();
+        delete.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_DeleteActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
+        InstructorDashBoard dash = new InstructorDashBoard();
+        dash.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BackActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton Add;
+    private javax.swing.JButton Back;
+    private javax.swing.JButton Delete;
+    private javax.swing.JButton Edit;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

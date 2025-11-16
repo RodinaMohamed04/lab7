@@ -4,10 +4,6 @@
  */
 package Frontend;
 
-/**
- *
- * @author Rodina Mohamed
- */
 public class InstructorDashBoard extends javax.swing.JFrame {
 
     /**
@@ -29,7 +25,6 @@ public class InstructorDashBoard extends javax.swing.JFrame {
     private void initComponents() {
 
         ViewCourses = new javax.swing.JButton();
-        lessons = new javax.swing.JButton();
         enrolledStudents = new javax.swing.JButton();
         Create = new javax.swing.JButton();
         logout = new javax.swing.JButton();
@@ -46,14 +41,12 @@ public class InstructorDashBoard extends javax.swing.JFrame {
             }
         });
 
-        lessons.setText("Manage lessons");
-        lessons.addActionListener(new java.awt.event.ActionListener() {
+        enrolledStudents.setText("View enrolled students");
+        enrolledStudents.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lessonsActionPerformed(evt);
+                enrolledStudentsActionPerformed(evt);
             }
         });
-
-        enrolledStudents.setText("View enrolled students");
 
         Create.setText("Create Courses");
         Create.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -83,7 +76,6 @@ public class InstructorDashBoard extends javax.swing.JFrame {
                 .addGap(159, 159, 159)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(ViewCourses, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lessons, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(enrolledStudents, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
                     .addComponent(Create, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(logout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -101,14 +93,12 @@ public class InstructorDashBoard extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addComponent(ViewCourses)
                 .addGap(18, 18, 18)
-                .addComponent(lessons)
-                .addGap(18, 18, 18)
                 .addComponent(enrolledStudents)
                 .addGap(18, 18, 18)
                 .addComponent(Create)
                 .addGap(18, 18, 18)
                 .addComponent(logout)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
 
         pack();
@@ -119,12 +109,6 @@ public class InstructorDashBoard extends javax.swing.JFrame {
         ve.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_ViewCoursesActionPerformed
-
-    private void lessonsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lessonsActionPerformed
-        ManageLessons ml = new ManageLessons();
-        ml.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_lessonsActionPerformed
 
     private void CreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateActionPerformed
         CreateCourse cr = new CreateCourse();
@@ -137,6 +121,12 @@ public class InstructorDashBoard extends javax.swing.JFrame {
         login.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_logoutActionPerformed
+
+    private void enrolledStudentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrolledStudentsActionPerformed
+        StudentEnrolled vs = new StudentEnrolled();
+        vs.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_enrolledStudentsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -179,7 +169,6 @@ public class InstructorDashBoard extends javax.swing.JFrame {
     private javax.swing.JButton ViewCourses;
     private javax.swing.JButton enrolledStudents;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JButton lessons;
     private javax.swing.JButton logout;
     // End of variables declaration//GEN-END:variables
 }

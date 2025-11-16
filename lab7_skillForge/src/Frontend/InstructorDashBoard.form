@@ -30,7 +30,6 @@
               <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="ViewCourses" max="32767" attributes="0"/>
-                  <Component id="lessons" max="32767" attributes="0"/>
                   <Component id="enrolledStudents" pref="177" max="32767" attributes="0"/>
                   <Component id="Create" alignment="0" max="32767" attributes="0"/>
                   <Component id="logout" alignment="0" max="32767" attributes="0"/>
@@ -52,14 +51,12 @@
               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               <Component id="ViewCourses" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="lessons" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="enrolledStudents" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="Create" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="logout" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="41" max="32767" attributes="0"/>
+              <EmptySpace pref="82" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -78,18 +75,13 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ViewCoursesActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="lessons">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Manage lessons"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lessonsActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="enrolledStudents">
       <Properties>
         <Property name="text" type="java.lang.String" value="View enrolled students"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="enrolledStudentsActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Create">
       <Properties>

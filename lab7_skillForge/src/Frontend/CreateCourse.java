@@ -4,10 +4,6 @@
  */
 package Frontend;
 
-/**
- *
- * @author mo
- */
 public class CreateCourse extends javax.swing.JFrame {
 
     /**
@@ -28,7 +24,7 @@ public class CreateCourse extends javax.swing.JFrame {
 
         jLabel3 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        Save = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -44,7 +40,12 @@ public class CreateCourse extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Save");
+        Save.setText("Save");
+        Save.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SaveActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Couses Title  ");
 
@@ -78,7 +79,7 @@ public class CreateCourse extends javax.swing.JFrame {
                                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(40, 40, 40)
-                            .addComponent(jButton1)
+                            .addComponent(Save)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton2)))
                     .addGroup(layout.createSequentialGroup()
@@ -102,7 +103,7 @@ public class CreateCourse extends javax.swing.JFrame {
                 .addGap(56, 56, 56)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(Save))
                 .addContainerGap(47, Short.MAX_VALUE))
         );
 
@@ -117,13 +118,18 @@ public class CreateCourse extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
+    private void SaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveActionPerformed
+     
+        
+    }//GEN-LAST:event_SaveActionPerformed
+
     /**
      * @param args the command line arguments
      */
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Save;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
