@@ -127,7 +127,7 @@ public class InstructorDashBoard extends javax.swing.JFrame {
     }//GEN-LAST:event_lessonsActionPerformed
 
     private void CreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateActionPerformed
-        CreateCourses cr = new CreateCourses();
+        CreateCourse cr = new CreateCourse();
         cr.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_CreateActionPerformed
