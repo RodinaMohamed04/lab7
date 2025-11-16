@@ -19,6 +19,7 @@ public class Instructor extends User {
 
     public void removeCourse(String courseId) {
         createdCourses.remove(courseId);
+
     }
 
     public ArrayList<String> getCreatedCourses() {

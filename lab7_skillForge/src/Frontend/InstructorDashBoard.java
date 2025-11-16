@@ -4,10 +4,6 @@
  */
 package Frontend;
 
-/**
- *
- * @author Rodina Mohamed
- */
 public class InstructorDashBoard extends javax.swing.JFrame {
 
     /**
@@ -15,6 +11,8 @@ public class InstructorDashBoard extends javax.swing.JFrame {
      */
     public InstructorDashBoard() {
         initComponents();
+        this.setLocationRelativeTo(null);
+
     }
 
     /**
@@ -26,75 +24,109 @@ public class InstructorDashBoard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        Courses = new javax.swing.JButton();
-        lessons = new javax.swing.JButton();
+        ViewCourses = new javax.swing.JButton();
         enrolledStudents = new javax.swing.JButton();
+        Create = new javax.swing.JButton();
+        logout = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 204));
 
-        jLabel1.setFont(new java.awt.Font("Swis721 BlkEx BT", 1, 14)); // NOI18N
-        jLabel1.setText("Instructor Dashboard");
-
-        Courses.setText("View Courses");
-        Courses.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Courses.addActionListener(new java.awt.event.ActionListener() {
+        ViewCourses.setText("View/edit Courses");
+        ViewCourses.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        ViewCourses.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CoursesActionPerformed(evt);
-            }
-        });
-
-        lessons.setText("Manage lessons");
-        lessons.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lessonsActionPerformed(evt);
+                ViewCoursesActionPerformed(evt);
             }
         });
 
         enrolledStudents.setText("View enrolled students");
+        enrolledStudents.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enrolledStudentsActionPerformed(evt);
+            }
+        });
+
+        Create.setText("Create Courses");
+        Create.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Create.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CreateActionPerformed(evt);
+            }
+        });
+
+        logout.setText("Logout");
+        logout.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        logout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(153, 153, 255));
+        jLabel2.setText("Instructor Dashboard");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(159, 159, 159)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Courses, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lessons, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(enrolledStudents, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addGap(159, 159, 159)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(ViewCourses, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(enrolledStudents, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
+                    .addComponent(Create, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(logout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(153, 153, 153))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(64, 64, 64)
-                .addComponent(Courses)
-                .addGap(18, 18, 18)
-                .addComponent(lessons)
+                .addGap(15, 15, 15)
+                .addComponent(jLabel2)
+                .addGap(32, 32, 32)
+                .addComponent(ViewCourses)
                 .addGap(18, 18, 18)
                 .addComponent(enrolledStudents)
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(Create)
+                .addGap(18, 18, 18)
+                .addComponent(logout)
+                .addContainerGap(82, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CoursesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CoursesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CoursesActionPerformed
+    private void ViewCoursesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewCoursesActionPerformed
+        ViewEdit ve = new ViewEdit();
+        ve.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_ViewCoursesActionPerformed
 
-    private void lessonsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lessonsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lessonsActionPerformed
+    private void CreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateActionPerformed
+        CreateCourse cr = new CreateCourse();
+        cr.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_CreateActionPerformed
+
+    private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
+        Login login = new Login();
+        login.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_logoutActionPerformed
+
+    private void enrolledStudentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrolledStudentsActionPerformed
+        StudentEnrolled vs = new StudentEnrolled();
+        vs.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_enrolledStudentsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -125,6 +157,7 @@ public class InstructorDashBoard extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new InstructorDashBoard().setVisible(true);
             }
@@ -132,9 +165,10 @@ public class InstructorDashBoard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Courses;
+    private javax.swing.JButton Create;
+    private javax.swing.JButton ViewCourses;
     private javax.swing.JButton enrolledStudents;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton lessons;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton logout;
     // End of variables declaration//GEN-END:variables
 }
