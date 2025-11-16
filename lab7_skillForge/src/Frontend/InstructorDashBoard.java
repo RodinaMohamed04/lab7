@@ -72,42 +72,40 @@ public class InstructorDashBoard extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(159, 159, 159)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ViewCourses, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(enrolledStudents, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
-                    .addComponent(Create, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(logout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(138, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(249, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ViewCourses, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(enrolledStudents, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Create, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(logout, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(245, 245, 245))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(262, 262, 262)
                 .addComponent(jLabel2)
-                .addGap(153, 153, 153))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addGap(51, 51, 51)
                 .addComponent(jLabel2)
-                .addGap(32, 32, 32)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
                 .addComponent(ViewCourses)
-                .addGap(18, 18, 18)
+                .addGap(39, 39, 39)
                 .addComponent(enrolledStudents)
-                .addGap(18, 18, 18)
+                .addGap(29, 29, 29)
                 .addComponent(Create)
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
                 .addComponent(logout)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addGap(128, 128, 128))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void ViewCoursesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewCoursesActionPerformed
-        ViewEdit ve = new ViewEdit();
-        ve.setVisible(true);
-        this.setVisible(false);
+ 
     }//GEN-LAST:event_ViewCoursesActionPerformed
 
     private void CreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateActionPerformed
@@ -123,9 +121,7 @@ public class InstructorDashBoard extends javax.swing.JFrame {
     }//GEN-LAST:event_logoutActionPerformed
 
     private void enrolledStudentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrolledStudentsActionPerformed
-        StudentEnrolled vs = new StudentEnrolled();
-        vs.setVisible(true);
-        this.setVisible(false);
+     
     }//GEN-LAST:event_enrolledStudentsActionPerformed
 
     /**
