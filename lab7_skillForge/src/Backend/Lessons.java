@@ -24,5 +24,6 @@ public class Lessons {
     public void addResource(String resource) {
         resources.add(resource);
     }
+
 }
 
