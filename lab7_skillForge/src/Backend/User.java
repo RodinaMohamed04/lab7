@@ -1,5 +1,7 @@
 
 package Backend;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class User {
@@ -27,7 +29,17 @@ public class User {
         this.role = role;
 
     }
+ public static String hashy(String password) throws NoSuchAlgorithmException {
+        MessageDigest m = MessageDigest.getInstance("SHA-256");
+        byte[] hashbytes = m.digest(password.getBytes());
+        String s = "";
+        for (byte hashbyte : hashbytes) {
+            s += String.format("%02x", hashbyte);
 
+        }
+        return s;
+
+    }
     public String getUserName() {
         return userName;
     }
@@ -53,10 +65,14 @@ public class User {
         return passwordHash;
     }
 
-    public void setPasswordHash(String passwordHash) {
-        this.passwordHash = passwordHash;
+   public void setPassword(String password) {
+    try {
+        this.passwordHash = hashy(password);
+    } catch (NoSuchAlgorithmException e) {
+        throw new RuntimeException(e);
     }
-    
+}
+
 
     public String getRole() {
         return role;
