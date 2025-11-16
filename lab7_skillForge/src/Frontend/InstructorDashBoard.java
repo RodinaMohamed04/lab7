@@ -30,6 +30,8 @@ public class InstructorDashBoard extends javax.swing.JFrame {
         Courses = new javax.swing.JButton();
         lessons = new javax.swing.JButton();
         enrolledStudents = new javax.swing.JButton();
+        Courses1 = new javax.swing.JButton();
+        Courses2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 204));
@@ -37,7 +39,7 @@ public class InstructorDashBoard extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Swis721 BlkEx BT", 1, 14)); // NOI18N
         jLabel1.setText("Instructor Dashboard");
 
-        Courses.setText("View Courses");
+        Courses.setText("View/edit Courses");
         Courses.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Courses.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,6 +56,22 @@ public class InstructorDashBoard extends javax.swing.JFrame {
 
         enrolledStudents.setText("View enrolled students");
 
+        Courses1.setText("Create Courses");
+        Courses1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Courses1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Courses1ActionPerformed(evt);
+            }
+        });
+
+        Courses2.setText("Logout");
+        Courses2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Courses2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Courses2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -65,7 +83,9 @@ public class InstructorDashBoard extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(Courses, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lessons, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(enrolledStudents, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)))
+                            .addComponent(enrolledStudents, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
+                            .addComponent(Courses1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Courses2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -76,13 +96,17 @@ public class InstructorDashBoard extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(64, 64, 64)
+                .addGap(37, 37, 37)
                 .addComponent(Courses)
                 .addGap(18, 18, 18)
                 .addComponent(lessons)
                 .addGap(18, 18, 18)
                 .addComponent(enrolledStudents)
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(Courses1)
+                .addGap(18, 18, 18)
+                .addComponent(Courses2)
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         pack();
@@ -95,6 +119,14 @@ public class InstructorDashBoard extends javax.swing.JFrame {
     private void lessonsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lessonsActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_lessonsActionPerformed
+
+    private void Courses1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Courses1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Courses1ActionPerformed
+
+    private void Courses2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Courses2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Courses2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -133,6 +165,8 @@ public class InstructorDashBoard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Courses;
+    private javax.swing.JButton Courses1;
+    private javax.swing.JButton Courses2;
     private javax.swing.JButton enrolledStudents;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton lessons;
