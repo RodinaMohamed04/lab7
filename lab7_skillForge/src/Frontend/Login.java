@@ -4,6 +4,8 @@
  */
 package Frontend;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Rodina Mohamed
@@ -15,6 +17,7 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+         this.setLocationRelativeTo(null);
     }
 
     /**
@@ -35,6 +38,7 @@ public class Login extends javax.swing.JFrame {
         Instructor = new javax.swing.JRadioButton();
         jLabel4 = new javax.swing.JLabel();
         SignUp = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,10 +71,19 @@ public class Login extends javax.swing.JFrame {
 
         jLabel4.setText("You don't have an account?");
 
+        SignUp.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         SignUp.setText("Sign Up");
         SignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SignUpActionPerformed(evt);
+            }
+        });
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setText("Login");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -92,8 +105,9 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(Email)
                         .addComponent(Password, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addContainerGap(238, Short.MAX_VALUE))
+                    .addComponent(jLabel4)
+                    .addComponent(jButton1))
+                .addContainerGap(471, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,11 +126,13 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Student)
                     .addComponent(Instructor))
+                .addGap(22, 22, 22)
+                .addComponent(jButton1)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(SignUp)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(208, Short.MAX_VALUE))
         );
 
         pack();
@@ -137,6 +153,28 @@ public class Login extends javax.swing.JFrame {
     private void PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PasswordActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+     String email=Email.getText();
+           String password=Password.getText();
+          if(email.isEmpty() || password.isEmpty()){
+         JOptionPane.showMessageDialog(this, "Please fill in both username and password!");
+          } 
+          if(!Student.isSelected() && !Instructor.isSelected())
+    {
+         JOptionPane.showMessageDialog(this, "Please select Student or Instructor", "Input Error", JOptionPane.ERROR_MESSAGE);
+    }
+    if(Student.isSelected()){
+          StudentDashBoard st = new StudentDashBoard();
+     st.setVisible(true);
+     this.setVisible(false);
+    }
+     if(Instructor.isSelected()){
+          InstructorDashBoard in = new InstructorDashBoard();
+     in.setVisible(true);
+     this.setVisible(false);
+    }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,6 +202,7 @@ public class Login extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -179,6 +218,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField Password;
     private javax.swing.JButton SignUp;
     private javax.swing.JRadioButton Student;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
