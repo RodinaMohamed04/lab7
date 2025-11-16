@@ -1,14 +1,25 @@
 
 package Backend;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class User {
     protected String userName;
-    protected String userId;
+     protected static final AtomicInteger nextID = new AtomicInteger(100);
+     protected int userId;
     protected String email;
     protected String passwordHash;
     protected String role;
+    
+    public User(String userName, String email, String passwordHash, String role) {
+        this.userName = userName;
+        this.userId = nextID.getAndIncrement();
+        this.email = email;
+        this.passwordHash = passwordHash;
+        this.role = role;
 
-    public User(String userName, String userId, String email, String passwordHash, String role) {
+    }
+
+    public User(String userName, int userId, String email, String passwordHash, String role) {
         this.userName = userName;
         this.userId = userId;
         this.email = email;
@@ -25,7 +36,7 @@ public class User {
         this.userName = userName;
     }
 
-    public String getUserId() {
+    public int getUserId() {
         return userId;
     }
 
