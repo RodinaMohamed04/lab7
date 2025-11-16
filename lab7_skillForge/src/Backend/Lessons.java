@@ -25,3 +25,4 @@ public class Lessons {
         resources.add(resource);
     }
 }
+
