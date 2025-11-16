@@ -14,6 +14,7 @@ class StudentCourseProgress {
         this.completedLessons = new ArrayList<>();
     }
 
+
 }
 public class Student extends User {
     private ArrayList<String> enrolledCourses;
