@@ -1,0 +1,50 @@
+{
+  "users": [
+    {
+      "id": "U001",
+      "name": "Rodina Mohamed",
+      "email": "rodina@example.com",
+      "password": "1234",
+      "role": "student",
+      "enrolledCourses": ["C101", "C102"],
+      "completedLessons": {
+        "C101": [1, 2, 5],
+        "C102": [1]
+      },
+      "progress": {
+        "C101": 60,
+        "C102": 20
+      }
+    },
+    {
+      "id": "U002",
+      "name": "Amina Ahmed",
+      "email": "amina@example.com",
+      "password": "abcd",
+      "role": "student",
+      "enrolledCourses": ["C101"],
+      "completedLessons": {
+        "C101": [1]
+      },
+      "progress": {
+        "C101": 10
+      }
+    },
+    {
+      "id": "U010",
+      "name": "Dr. Layla Abou-Hadeed",
+      "email": "layla@example.com",
+      "password": "admin123",
+      "role": "instructor",
+      "coursesTeaching": ["C101", "C202"]
+    },
+    {
+      "id": "U011",
+      "name": "Eng. Ahmed ElSayed",
+      "email": "ahmed@example.com",
+      "password": "teach99",
+      "role": "instructor",
+      "coursesTeaching": ["C102"]
+    }
+  ]
+}
