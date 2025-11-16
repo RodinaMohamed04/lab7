@@ -20,7 +20,7 @@ public class Student extends User {
     private ArrayList<String> enrolledCourses;
     private ArrayList<StudentCourseProgress> coursesProgress;
 
-    public Student(String userName, String userId, String email, String passwordHash) {
+    public Student(String userName, int userId, String email, String passwordHash) {
         super(userName, userId, email, passwordHash, "student");
         this.enrolledCourses = new ArrayList<>();
         this.coursesProgress = new ArrayList<>();

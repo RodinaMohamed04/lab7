@@ -13,7 +13,7 @@ public class UserService {
     }
 
     // ---------------- Register ----------------
-    public boolean registerStudent(String userName, String userId, String email, String passwordHash) {
+    public boolean registerStudent(String userName, int userId, String email, String passwordHash) {
         if (getUserById(userId) != null) return false;
 
         Student s = new Student(userName, userId, email, passwordHash);
@@ -22,7 +22,7 @@ public class UserService {
         return true;
     }
 
-    public boolean registerInstructor(String userName, String userId, String email, String passwordHash) {
+    public boolean registerInstructor(String userName, int userId, String email, String passwordHash) {
         if (getUserById(userId) != null) return false;
 
         Instructor i = new Instructor(userName, userId, email, passwordHash);
@@ -42,9 +42,9 @@ public class UserService {
     }
 
     // ---------------- Utilities ----------------
-    public User getUserById(String userId) {
+    public User getUserById(int userId) {
         for (User u : users) {
-            if (u.getUserId().equals(userId)) return u;
+            if (u.getUserId()==userId) return u;
         }
         return null;
     }

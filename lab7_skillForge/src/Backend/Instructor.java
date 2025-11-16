@@ -6,7 +6,7 @@ public class Instructor extends User {
 
     private ArrayList<String> createdCourses; //ArrayList of courses created by instructor
 
-    public Instructor(String userName, String userId, String email, String passwordHash) {
+    public Instructor(String userName, int userId, String email, String passwordHash) {
         super(userName, userId, email, passwordHash, "instructor");
         this.createdCourses = new ArrayList<>();
     }

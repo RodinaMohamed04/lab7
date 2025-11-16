@@ -65,7 +65,7 @@ public class JSONDataBaseManager {
                 if (role.equals("student")) {
                     Student s = new Student(
                             obj.getString("userName"),
-                            obj.getString("userId"),
+                            obj.getInt("userId"),
                             obj.getString("email"),
                             obj.getString("passwordHash")
                     );
@@ -89,7 +89,7 @@ public class JSONDataBaseManager {
                 } else if (role.equals("instructor")) {
                     Instructor ins = new Instructor(
                             obj.getString("userName"),
-                            obj.getString("userId"),
+                            obj.getInt("userId"),
                             obj.getString("email"),
                             obj.getString("passwordHash")
                     );
