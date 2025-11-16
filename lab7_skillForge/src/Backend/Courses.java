@@ -9,10 +9,13 @@ package Backend;
  * @author Rodina Mohamed
  */
 public class Courses {
+    private String courseId;
     private String courseName;
+    private String description;
+    private String instructorId;
     private int creditHours;
 
-    public Course(String courseName, int creditHours) {
+    public Courses(String courseName, int creditHours) {
         this.courseName = courseName;
         this.creditHours = creditHours;
     }
@@ -34,4 +37,4 @@ public class Courses {
     }
     
 }
-}
+
