@@ -4,6 +4,7 @@
  */
 package Frontend;
 
+import javax.swing.ButtonGroup;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,6 +19,9 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
          this.setLocationRelativeTo(null);
+         ButtonGroup group = new ButtonGroup();
+         group.add(Student);
+         group.add(Instructor);
     }
 
     /**
@@ -29,6 +33,7 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         Email = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -218,6 +223,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField Password;
     private javax.swing.JButton SignUp;
     private javax.swing.JRadioButton Student;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
