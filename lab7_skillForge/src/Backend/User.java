@@ -1,17 +1,18 @@
-
 package Backend;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class User {
+
     protected String userName;
-     protected static final AtomicInteger nextID = new AtomicInteger(100);
-     protected int userId;
+    protected static final AtomicInteger nextID = new AtomicInteger(100);
+    protected int userId;
     protected String email;
     protected String passwordHash;
     protected String role;
-    
+
     public User(String userName, String email, String passwordHash, String role) {
         this.userName = userName;
         this.userId = nextID.getAndIncrement();
@@ -29,7 +30,8 @@ public class User {
         this.role = role;
 
     }
- public static String hashy(String password) throws NoSuchAlgorithmException {
+
+    public static String hashy(String password) throws NoSuchAlgorithmException {
         MessageDigest m = MessageDigest.getInstance("SHA-256");
         byte[] hashbytes = m.digest(password.getBytes());
         String s = "";
@@ -40,6 +42,7 @@ public class User {
         return s;
 
     }
+
     public String getUserName() {
         return userName;
     }
@@ -59,24 +62,21 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-    
 
     public String getPasswordHash() {
         return passwordHash;
     }
 
-   public void setPassword(String password) {
-    try {
-        this.passwordHash = hashy(password);
-    } catch (NoSuchAlgorithmException e) {
-        throw new RuntimeException(e);
+    public void setPassword(String password) {
+        try {
+            this.passwordHash = hashy(password);
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
     }
-}
-
 
     public String getRole() {
         return role;
     }
-    
-    
+
 }
